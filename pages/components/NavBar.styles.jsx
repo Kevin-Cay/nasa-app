@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.section`
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
     background: #306097;
     color: #eee;
     display: flex;
@@ -14,7 +14,7 @@ export const NavLogo = styled.div`
     color: #eee;
     display: flex;
     h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin: 0;
     }
 `

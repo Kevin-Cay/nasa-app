@@ -9,4 +9,8 @@ export const ContainerHeader = styled.section`
     background-image: url('/waveNav.svg') ;
     background-repeat: no-repeat;
     background-size: auto;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
 `
+
