@@ -4,7 +4,7 @@ export const ContinerRover = styled.section`
     margin: -1;
     width:100%;
     padding: 5rem 5rem 2rem 5rem;
-    height: 450px;
+    height: 800px;
     background-image: url('/wavePOTD.svg') ;
     background-repeat: no-repeat;
     background-size: contain;

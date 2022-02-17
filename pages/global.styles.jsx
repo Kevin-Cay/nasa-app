@@ -19,3 +19,10 @@ export const H3 = styled.h3`
     color: #0000008f ;
     margin: 0;
 `
+
+export const P = styled.p`
+    font-size: 1.2rem ;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+`
