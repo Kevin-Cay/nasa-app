@@ -16,13 +16,13 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
     font-size: 1rem ;
     font-weight: 500;
-    color: #0000008f ;
+    color:   #1b1b1b75;
     margin: 0;
 `
 
 export const P = styled.p`
     font-size: 1.2rem ;
     font-weight: 400;
-    color: #000;
+    color: #000000ba;
     margin: 0;
 `

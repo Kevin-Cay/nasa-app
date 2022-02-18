@@ -1,8 +1,16 @@
-import React from 'react'
+import {FooterContainer, FooterContent} from './Footer.styles'
+import {H2} from '../global.styles'
+
 
 function Footer() {
   return (
-    <div>This is the Footer</div>
+    <FooterContainer>
+      <H2>Nasa App</H2>
+      <FooterContent>
+        Hola mundo
+      </FooterContent>
+
+    </FooterContainer>
   )
 }
 
