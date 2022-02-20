@@ -23,7 +23,7 @@ function RoverPhotos() {
             <button>Copy</button>
             <button>Copy</button>
         </div>
-        <ResponsiveCarousel></ResponsiveCarousel>
+        <ResponsiveCarousel/>
       </GalerySection>
       </ContinerRover>
   );

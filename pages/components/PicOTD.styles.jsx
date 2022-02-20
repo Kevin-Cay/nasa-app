@@ -12,6 +12,13 @@ export const ContainerPic = styled.section`
     display: flex;
     align-items:center;
     justify-content:space-between;
+    @media screen and (max-width:600px){
+        height: 700px;
+        display: flex;
+        padding: 4.5rem 2.5rem 2rem 2.5rem;
+        flex-direction: column-reverse;
+        justify-content:space-evenly;
+    }
 `
 export const ImageDescription = styled.div`
     width: 50%;
@@ -19,6 +26,10 @@ export const ImageDescription = styled.div`
     display: flex;
     flex-direction:column;
     justify-content:space-evenly;
+    @media screen and (max-width:600px){
+        width:100%;
+        height: 60%;
+    }
 `
 
 export const ImageOTD = styled.div`
@@ -26,4 +37,8 @@ export const ImageOTD = styled.div`
     width: 40%;
     height: 75%;
     border-radius: 5px;
+    @media screen and (max-width:600px){
+        width:100%;
+        height: 40%;
+    }
 `

@@ -11,5 +11,20 @@ export const ContainerHeader = styled.section`
     display: flex;
     justify-content:space-between;
     align-items:center;
-`
 
+    @media screen and (max-width:600px){
+    padding: 0 2.5rem;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    }
+`
+export const HeaderImage = styled.div`
+    position:relative;
+    width: 35%;
+    height: 75%;
+    @media screen and (max-width:600px){
+        height: 35%;
+    }
+`

@@ -13,6 +13,14 @@ export const ContinerRover = styled.section`
     display: flex;
     align-items: center ;
     justify-content:space-between;
+    @media screen and (max-width:600px){
+        height: 1100px;
+        padding: 3rem 2.5rem 2rem 2.5rem;
+        flex-direction:column-reverse;
+    }
+    @media screen and (max-width:750px){
+        height: auto;
+    }
 `
 export const RoverDescription = styled.section`
     width: 50%;
@@ -21,6 +29,10 @@ export const RoverDescription = styled.section`
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
+    @media screen and (max-width:600px){
+        width:100%;
+        height:40%;
+    }
 `
 
 
@@ -31,10 +43,16 @@ export const GalerySection = styled.section`
     display: flex;
     flex-direction:column;
     justify-content:space-evenly;
+    
+    @media screen and (max-width:600px){
+        width:100%;
+        height:55%;
+    }
 `
 
 export const GaleryContainer = styled.div`
+    margin-top:15px;
     width:100%;
-    height: 70%;
+    height: auto;
     position: relative;
 `

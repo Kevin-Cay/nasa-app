@@ -1,16 +1,17 @@
 import React from 'react'
 import Image from "next/image"
 import {H1,H2,  P} from '../global.styles'
-import { NasaContentContainer, NasaContentText } from './NasaContent.styles'
+import { NasaContentContainer, NasaContentText, NasaContentImage } from './NasaContent.styles'
 
 function NasaContent() {
   return (
     <NasaContentContainer>
-        <Image 
-            src={'/saturn.svg'} alt="space_rocket" 
-            width={400} 
-            height={400} 
+        <NasaContentImage>
+            <Image 
+            src={'/saturn.svg'} alt='saturn_image'  layout='fill'
+            objectFit='contain'
             />
+        </NasaContentImage>
         <NasaContentText>
             <H1>
                 This is a title

@@ -7,7 +7,7 @@ function Footer() {
     <FooterContainer>
       <H2>Nasa App</H2>
       <FooterContent>
-        Hola mundo
+        hoola
       </FooterContent>
 
     </FooterContainer>

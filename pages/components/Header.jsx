@@ -1,15 +1,16 @@
-import { ContainerHeader } from "./Header.styles"
+import { ContainerHeader, HeaderImage } from "./Header.styles"
 import { H1, H2 } from "../global.styles"
 import Image from "next/image"
 
 function Header() {
     return (
         <ContainerHeader id='header' >
-            <Image 
-            src={'/space_rocket-3.svg'} alt="space_rocket" 
-            width={400} 
-            height={400} 
-            />
+            <HeaderImage>
+                <Image 
+                src={'/space_rocket-3.svg'} alt='space_rocket'  layout='fill'
+                objectFit='contain'
+                />
+            </HeaderImage>
             <div>
                 <H1>Hi there!</H1>
                 <H2>

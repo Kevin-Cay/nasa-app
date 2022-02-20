@@ -30,4 +30,7 @@ export const NavMenu = styled.div`
     a:hover{
         color: #ccc;
     }
+    @media screen and (max-width:600px){
+        display:none;
+    }
 `
