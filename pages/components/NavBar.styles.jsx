@@ -14,16 +14,17 @@ export const NavLogo = styled.div`
     color: #eee;
     display: flex;
     h1{
-        font-size: 3rem;
+        font-size: 3em;
         margin: 0;
     }
 `
 
 export const NavMenu = styled.div`
-    width: 350px;
+    width: 450px;
     display: flex;
     justify-content:space-between;
     a{
+        font-size: 1.8em;
         font-weight: 500;
     }
     a:hover{

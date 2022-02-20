@@ -4,7 +4,7 @@ export const ContainerPic = styled.section`
     margin: -1;
     width:100%;
     padding: 8rem 5rem 2rem 5rem;
-    height: 500px;
+    height: 600px;
     background-image: url('/waveHeader.svg') ;
     background-repeat: no-repeat;
     background-size: contain;
@@ -25,6 +25,5 @@ export const ImageOTD = styled.div`
     position:relative;
     width: 40%;
     height: 75%;
-    border: 1px red solid;
     border-radius: 5px;
 `
