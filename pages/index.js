@@ -5,15 +5,29 @@ import RoverPhotos from "./components/RoverPhotos"
 import Footer from "./components/Footer"
 import NasaContent from "./components/NasaContent"
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
       <NavBar />
       <Header />
-      <PicOTD />
+      {/* <PicOTD picData={data} /> */}
       <NasaContent />
       <RoverPhotos />
       <Footer />
     </>
   )
 }
+
+// export async function getStaticProps(){
+  
+//   try{
+//     const data = await res.json()
+//     return{
+//       props: {
+//         data,
+//       }
+//     }
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }

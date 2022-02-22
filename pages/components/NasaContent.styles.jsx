@@ -19,7 +19,7 @@ export const NasaContentContainer = styled.section`
     }
 `
 export const NasaContentText = styled.div`
-    width:60%;
+    width:55%;
     height:45%;
     display: flex;
     flex-direction:column;

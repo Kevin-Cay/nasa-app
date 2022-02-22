@@ -1,15 +1,22 @@
 import { Nav, NavLogo, NavMenu } from "./NavBar.styles"
+import {SiNasa} from 'react-icons/si'
+import {BsGithub} from 'react-icons/bs'
+
 
 function NavBar() {
     return (
         <Nav>
             <NavLogo>
-                <h1>NS</h1>
+                <a href="">
+                    <SiNasa size={"108px"} />
+                </a>
             </NavLogo>
             <NavMenu>
                 <a href="#POTD">Pic Of The Day</a>
-                <a href="#">Link2</a>
-                <a href="#">Link3</a>
+                <a href="#RoverPhotos">Rover Photos</a>
+                <a rel="noreferrer" target="_blank" href="https://github.com/Kevin-Cay/nasa-app.git">
+                    <BsGithub size="1.2em" />
+                </a>
             </NavMenu>
         </Nav>
     )

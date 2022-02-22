@@ -1,5 +1,5 @@
 import { ContainerHeader, HeaderImage } from "./Header.styles"
-import { H1, H2 } from "../global.styles"
+import { H1, H2 , H3} from "../global.styles"
 import Image from "next/image"
 
 function Header() {
@@ -12,11 +12,11 @@ function Header() {
                 />
             </HeaderImage>
             <div>
-                <H1>Hi there!</H1>
+                <H1>Hi there! </H1>
                 <H2>
-                    Here you can find a lot of 
-                    information about NASA
-                    </H2>
+                Space lover? 
+                <span> Discover amazing images about the Universe here.</span>
+                </H2>
             </div>
         </ContainerHeader>
     )

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.section`
     width: 100%;
+    max-height:100px;
     padding: 2rem 3rem;
     background: #306097;
     color: #eee;
@@ -11,12 +12,10 @@ export const Nav = styled.section`
 `
 
 export const NavLogo = styled.div`
+    width: 100px;
     color: #eee;
     display: flex;
-    h1{
-        font-size: 3em;
-        margin: 0;
-    }
+    margin: 0;
 `
 
 export const NavMenu = styled.div`

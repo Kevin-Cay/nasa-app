@@ -14,10 +14,10 @@ function NasaContent() {
         </NasaContentImage>
         <NasaContentText>
             <H1>
-                This is a title
+                About NASA
             </H1>
             <P>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum amet consequatur accusantium animi illo officia nobis doloribus id atque ab cum, tempore eveniet et ex!
+                The <span>National Aeronautics and Space Administration</span> established in 1958 for the research and development of vehicles and activities for the exploration of space within and outside Eart’s atmosphere.
             </P>
         </NasaContentText>
     </NasaContentContainer>
