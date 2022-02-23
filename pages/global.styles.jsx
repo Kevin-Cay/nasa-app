@@ -28,6 +28,9 @@ export const H3 = styled.h3`
     font-weight: 500;
     color:   #1b1b1b75;
     margin: 0;
+    span{
+        font-weight:700;
+    }
     @media screen and (max-width:400px){
         font-size:1em;
     }

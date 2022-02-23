@@ -15,7 +15,7 @@ export const ContainerPic = styled.section`
     @media screen and (max-width:600px){
         height: 825px;
         display: flex;
-        padding: 4.5rem 2.5rem 2rem 2.5rem;
+        padding: 4.5rem 2rem 2rem 2rem;
         flex-direction: column-reverse;
         justify-content:space-evenly;
     }

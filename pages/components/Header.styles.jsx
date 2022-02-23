@@ -13,7 +13,7 @@ export const ContainerHeader = styled.section`
     align-items:center;
 
     @media screen and (max-width:600px){
-    padding: 0 2.5rem;
+    padding: 0 2rem;
     height: 400px;
     display: flex;
     flex-direction: column;

@@ -7,18 +7,19 @@ export const FooterContainer = styled.div`
     padding: 0 5rem;
     display:flex;
     align-items:center;
-    justify-content: inline-block;
+    justify-content: center;
     @media screen and (max-width:600px){
-        padding: 0 2.5rem;
+        padding: 0 2rem;
     }
 `
 export const FooterContent = styled.div`
-    width: auto;
+    margin-left:20px;
+    width: 225px;
     height: 80%;
-    margin-left:5em;
     display: flex;
     align-items:center;
+    justify-content:space-between;
     @media screen and (max-width:600px){
-        width:50%;
+        width:60%;
     }
 `

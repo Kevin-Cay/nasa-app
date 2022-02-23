@@ -5,30 +5,39 @@ import ResponsiveCarousel from './ResponsiveCarousel';
 
 function RoverPhotos() {
   const [rover, setRover] = useState("curiosity");
-
-  useEffect(() => {
-    console.log("click", rover)
+  const [roverInfo, setRoverInfo] = useState([]);
+  let description = roverInfo.description;
+  let descriptionArr = [];
+  for (const key in description) {
+    if (Object.hasOwnProperty.call(description, key)) {
+      descriptionArr.push(description[key])
+    }
+  }
+  const fetchRoversInfo = async () =>{
+    const response = await fetch(`/api/${rover}`)
+    const data = await response.json()
+    setRoverInfo(data[0])
+  }
   
-  }, [rover]);
-  
+  useEffect(()=>{
+    fetchRoversInfo()
+  }, [rover])
   return (
     <ContinerRover id="RoverPhotos">
       <RoverDescription>
         <H1>
-        This is the Rovers Name {rover}
+        {roverInfo.title}
         </H1>
-        <P>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quis quas eum est ducimus recusandae natus magni quos saepe blanditiis doloremque sequi deleniti accusamus labore eius mollitia non sapiente minus corrupti nemo dolor, ad incidunt?
-        </P>
+        {     descriptionArr.map((x, i) => <P key={i}>{x}</P> )
+        }
         <H3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quisquam!
+        {roverInfo.footer}
         </H3>
       </RoverDescription>
       <GalerySection>
         <div className="multi-button">
             <button onClick={() =>setRover("curiosity")} value="curiosity">Curiosity</button>
-            <button onClick={() =>setRover("opportunity")} value="opportunity">Opportunity</button>
-            <button onClick={() =>setRover('spirit')} value="spirit">Spirit</button>
+            <button onClick={() =>setRover("perseverance")} value="perseverance">Perseverance</button>
         </div>
         <ResponsiveCarousel/>
       </GalerySection>

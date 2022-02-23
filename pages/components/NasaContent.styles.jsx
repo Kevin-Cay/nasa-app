@@ -14,20 +14,21 @@ export const NasaContentContainer = styled.section`
     align-items:center;
     justify-content:space-between;
     @media screen and (max-width:600px){
-        padding: 2.5em 2.5em 2em 2.5em ;
+        height:675px;
+        padding: 2.5em 2em 2em 2em ;
         flex-direction:column;
         justify-content:space-evenly;
     }
 `
 export const NasaContentText = styled.div`
     width:55%;
-    height:45%;
+    height:55%;
     display: flex;
     flex-direction:column;
     justify-content:space-evenly;
     @media screen and (max-width:600px){
         width:100%;
-        height:40%;
+        height:50%;
     }
 
 `

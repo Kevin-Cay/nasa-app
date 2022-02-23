@@ -15,7 +15,7 @@ export const ContinerRover = styled.section`
     justify-content:space-between;
     @media screen and (max-width:600px){
         height: 1100px;
-        padding: 3rem 2.5rem 2rem 2.5rem;
+        padding: 3rem 2rem 2rem 2rem;
         flex-direction:column-reverse;
     }
     @media screen and (max-width:750px){
@@ -24,14 +24,15 @@ export const ContinerRover = styled.section`
 `
 export const RoverDescription = styled.section`
     width: 50%;
-    height:300px;
+    height:375px;
     position: relative;
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
     @media screen and (max-width:600px){
         width:100%;
-        height:40%;
+        height:350px;
+        justify-content:space-between;
     }
 `
 
