@@ -24,7 +24,9 @@ export const HeaderImage = styled.div`
     position:relative;
     width: 35%;
     height: 75%;
+    margin-right:5em;
     @media screen and (max-width:600px){
         height: 35%;
+        margin-right:0;
     }
 `
