@@ -1,36 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { GaleryContainer } from './RoverPhotos.styles';
-function ResponsiveCarousel() {
+function ResponsiveCarousel({rover, roverGalery}) {
+    
+    let arr_img = roverGalery.map(x => x.img_src)
+    let arr_full_name = roverGalery.map(x => x.camera.full_name)
+    
+
+
     return (
         <GaleryContainer>
 
-        <Carousel>
-            <div>
-                <img src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG" />
-                <p className="legend">Legend 1</p>
-            </div>
-            <div>
-                <img src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG" />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG" />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG" />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RRB_486265291EDR_F0481570RHAZ00323M_.JPG" />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src="./sky.jpg" />
-                <p className="legend">Legend 3</p>
-            </div>
+        <Carousel autoPlay={true} dynamicHeight={true}  infiniteLoop={true} thumbWidth={40} interval={5000} >
+                
+        {
+            arr_img.map((element, i) => (
+                 <div key={element} >
+                <img src={element} />
+                <p className="legend">Camera: {arr_full_name[i]}</p>
+                </div>) )  
+        }
+            
         </Carousel>
         </GaleryContainer>
     );

@@ -5,29 +5,38 @@ import RoverPhotos from "./components/RoverPhotos"
 import Footer from "./components/Footer"
 import NasaContent from "./components/NasaContent"
 
-export default function Home({data}) {
+export default function Home({data, dataCuriosity, dataPerseverance}) {
+
   return (
     <>
       <NavBar />
       <Header />
-      {/* <PicOTD picData={data} /> */}
+      <PicOTD picData={data} />
       <NasaContent />
-      <RoverPhotos />
+      <RoverPhotos dataCuriosity={dataCuriosity} dataPerseverance={dataPerseverance} />
       <Footer />
     </>
   )
 }
 
-// export async function getStaticProps(){
+export async function getStaticProps(){
   
-//   try{
-//     const data = await res.json()
-//     return{
-//       props: {
-//         data,
-//       }
-//     }
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
+  try{
+    const apiKey = process.env.REACT_APP_NASA_APIKEY
+    const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+    const data = await res.json()
+    const resCuriosity = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${apiKey}`)
+    const dataCuriosity = await resCuriosity.json() 
+    const resPerseverance = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?&page=1&api_key=${apiKey}`)
+    const dataPerseverance = await resPerseverance.json()
+    return{
+      props: {
+        data,
+        dataCuriosity : dataCuriosity,
+        dataPerseverance: dataPerseverance
+      }
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
