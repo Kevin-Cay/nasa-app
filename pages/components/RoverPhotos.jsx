@@ -8,7 +8,6 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
   const [roverInfo, setRoverInfo] = useState([]);
   const [roverGalery, setRoverGalery] = useState(dataCuriosity.photos);
 
-  let roverName = rover
   const fetchRoversInfo = async () =>{
     const response = await fetch(`/api/${rover}`)
     const data = await response.json()
@@ -22,13 +21,9 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
       descriptionArr.push(description[key])
     }
   }
-  const fetchCarList= useCallback(() => {
-    
-    fetchRoversInfo()
-    }, [])
   useEffect(()=>{
-    fetchCarList()
-  }, [fetchCarList])
+    fetchRoversInfo()
+  }, [])
   return (
     <ContinerRover id="RoverPhotos">
       <RoverDescription>
