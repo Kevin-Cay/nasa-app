@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import {H1, H3, P, SubTitle} from '../global.styles'
 import { ContinerRover, GalerySection, RoverDescription } from './RoverPhotos.styles'
 import ResponsiveCarousel from './ResponsiveCarousel';
@@ -8,7 +8,7 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
   const [roverInfo, setRoverInfo] = useState([]);
   const [roverGalery, setRoverGalery] = useState(dataCuriosity.photos);
 
-
+  let roverName = rover
   const fetchRoversInfo = async () =>{
     const response = await fetch(`/api/${rover}`)
     const data = await response.json()
@@ -22,9 +22,13 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
       descriptionArr.push(description[key])
     }
   }
-  useEffect(()=>{
+  const fetchCarList= useCallback(() => {
+    
     fetchRoversInfo()
-  }, [rover])
+    }, [])
+  useEffect(()=>{
+    fetchCarList()
+  }, [fetchCarList])
   return (
     <ContinerRover id="RoverPhotos">
       <RoverDescription>
