@@ -21,9 +21,18 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
       descriptionArr.push(description[key])
     }
   }
+
+  // useCallback(
+  //   () => {
+     
+  //   },
+  //   [rover],
+  // )
+  
+
   useEffect(()=>{
     fetchRoversInfo()
-  }, [])
+  })
   return (
     <ContinerRover id="RoverPhotos">
       <RoverDescription>
@@ -39,8 +48,8 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
       </RoverDescription>
       <GalerySection>
         <div className="multi-button">
-            <button onClick={() =>(setRover("curiosity"), fetchRoversInfo(), setRoverGalery(dataCuriosity.photos))} value="curiosity">Curiosity</button>
-            <button onClick={() =>(setRover("perseverance", fetchRoversInfo(),  setRoverGalery(dataPerseverance.latest_photos)))} value="perseverance">Perseverance</button>
+            <button onClick={() =>(setRover("curiosity"), setRoverGalery(dataCuriosity.photos))} value="curiosity">Curiosity</button>
+            <button onClick={() =>(setRover("perseverance",  setRoverGalery(dataPerseverance.latest_photos)))} value="perseverance">Perseverance</button>
         </div>
         <ResponsiveCarousel rover={rover} roverGalery={roverGalery} />
       </GalerySection>
