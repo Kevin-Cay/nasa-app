@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image"
-import {H1,  P} from '../global.styles'
+import {H1,  P} from './global.styles'
 import { NasaContentContainer, NasaContentText, NasaContentImage, Rotate } from './NasaContent.styles'
 
 function NasaContent() {

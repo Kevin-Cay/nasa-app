@@ -1,5 +1,5 @@
 import {FooterContainer, FooterContent} from './Footer.styles'
-import {H3} from '../global.styles'
+import {H3} from './global.styles'
 import {SiNasa} from 'react-icons/si'
 import {BsGithub} from 'react-icons/bs'
 
