@@ -7,7 +7,7 @@ function PicOTD({picData}) {
   let dataContent = 'error' 
   if(Object.keys(picData).length>0){
     let content = picData.explanation
-    let newContent = content.split(".")
+    let newContent = content?.split(".")
     if(newContent.length >=4){
       dataContent = newContent.slice(0, 4).join(".").concat("...")
     }else{
