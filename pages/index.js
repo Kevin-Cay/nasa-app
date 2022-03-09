@@ -5,7 +5,41 @@ import RoverPhotos from "../components/RoverPhotos"
 import Footer from "../components/Footer"
 import NasaContent from "../components/NasaContent"
 
-export default function Home({data, dataCuriosity, dataPerseverance}) {
+const defaultData = {
+  date: "2022-03-09",
+  explanation: "'Ops, error loading information'",
+  hdurl: "https://apod.nasa.gov/apod/image/2203/FlowerRock_Curiosity_1561.jpg",
+  media_type: "image",
+  service_version: "v1",
+  title: "Error",
+  url: "/sky.jpg"
+  }
+
+const defaultDataRover ={
+  latest_photos: [
+  {
+  id: 944945,
+  sol: 371,
+  camera: {
+  id: 38,
+  name: "error",
+  rover_id: 8,
+  full_name: "Error"
+  },
+  img_src: "/error-api.png",
+  earth_date: "2022-03-06",
+  rover: {
+  id: 8,
+  name: "Perseverance",
+  landing_date: "2021-02-18",
+  launch_date: "2020-07-30",
+  status: "fail"
+  }
+  }]
+  
+  }
+
+export default function Home({data = defaultData, dataCuriosity = defaultDataRover , dataPerseverance =defaultDataRover }) {
 
   return (
     <>

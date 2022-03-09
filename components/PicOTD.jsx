@@ -10,7 +10,6 @@ function PicOTD({picData}) {
     if(newContent.length >=4){
       dataContent = newContent.slice(0, 4).join(".").concat("...")
     }
-    console.log(dataContent.length)
 
   return (
   <ContainerPic id="POTD" >
