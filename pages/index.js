@@ -7,15 +7,7 @@ import RoverPhotos from "../components/RoverPhotos"
 import Footer from "../components/Footer"
 import NasaContent from "../components/NasaContent"
 
-const defaultData = {
-  date: "2022-03-09",
-  explanation: "'Ops, error loading information'",
-  hdurl: "https://apod.nasa.gov/apod/image/2203/FlowerRock_Curiosity_1561.jpg",
-  media_type: "image",
-  service_version: "v1",
-  title: "Error",
-  url: "/sky.jpg"
-  }
+
 
 const defaultDataRover ={
   latest_photos: [
@@ -41,7 +33,7 @@ const defaultDataRover ={
   
   }
 
-export default function Home({data = defaultData, 
+export default function Home({data , 
                               dataCuriosity = defaultDataRover, 
                               dataPerseverance =defaultDataRover,}) {
 

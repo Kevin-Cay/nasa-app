@@ -4,12 +4,23 @@ import Image from 'next/image';
 
 
 function PicOTD({picData}) {
+  let dataContent = 'error' 
+  if(Object.keys(picData).length>0){
     let content = picData.explanation
     let newContent = content.split(".")
-    let dataContent
     if(newContent.length >=4){
       dataContent = newContent.slice(0, 4).join(".").concat("...")
+    }else{
+      dataContent = newContent.join('.')
     }
+  }else{
+    picData ={
+      title:"error",
+      date: '01-01-1991' ,
+      url: '/sky.jpg' ,
+    }
+  }
+
 
   return (
   <ContainerPic id="POTD" >
