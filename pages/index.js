@@ -1,3 +1,5 @@
+
+
 import Header from "../components/Header"
 import NavBar from "../components/NavBar"
 import PicOTD from "../components/PicOTD"
@@ -39,7 +41,9 @@ const defaultDataRover ={
   
   }
 
-export default function Home({data = defaultData, dataCuriosity = defaultDataRover , dataPerseverance =defaultDataRover }) {
+export default function Home({data = defaultData, 
+                              dataCuriosity = defaultDataRover, 
+                              dataPerseverance =defaultDataRover,}) {
 
   return (
     <>
@@ -47,7 +51,10 @@ export default function Home({data = defaultData, dataCuriosity = defaultDataRov
       <Header />
       <PicOTD picData={data} />
       <NasaContent />
-      <RoverPhotos dataCuriosity={dataCuriosity} dataPerseverance={dataPerseverance} />
+      <RoverPhotos 
+      dataCuriosity={dataCuriosity} 
+      dataPerseverance={dataPerseverance}
+       />
       <Footer />
     </>
   )
@@ -67,10 +74,13 @@ export async function getStaticProps(){
       props: {
         data,
         dataCuriosity : dataCuriosity,
-        dataPerseverance: dataPerseverance
-      }
+        dataPerseverance: dataPerseverance,
+      },
+      revalidate: 10,
     }
   } catch (error) {
     console.log(error)
   }
+
+
 }
