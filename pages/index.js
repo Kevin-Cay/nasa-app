@@ -1,9 +1,20 @@
 import Header from "../components/Header"
 import NavBar from "../components/NavBar"
-import PicOTD from "../components/PicOTD"
+// import PicOTD from "../components/PicOTD"
 import RoverPhotos from "../components/RoverPhotos"
 import Footer from "../components/Footer"
 import NasaContent from "../components/NasaContent"
+import { H1,  H3, P, SubTitle } from '../components/global.styles';
+import {ContainerPic, ImageDescription, ImageOTD} from '../components/PicOTD.styles'
+import Image from 'next/image';
+
+
+const defaultData ={
+  title:"error",
+  date: '01-01-1991' ,
+  url: '/sky.jpg' ,
+  explanation:'error'
+}
 
 
 
@@ -51,7 +62,6 @@ export default function Home({data ,
 }
 
 export async function getStaticProps(){
-  
   try{
     const apiKey = process.env.REACT_APP_NASA_APIKEY
     const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
@@ -71,4 +81,34 @@ export async function getStaticProps(){
   } catch (error) {
     console.log(error)
   }
+}
+
+export function PicOTD({picData = defaultData}) {
+  let dataContent = 'error' 
+    let content = picData.explanation
+    let newContent = content.split(".")
+    if(newContent.length >=4){
+      dataContent = newContent.slice(0, 4).join(".").concat("...")
+    }else{
+      dataContent = newContent.join('.')
+    }
+
+
+  return (
+  <ContainerPic id="POTD" >
+      <ImageDescription>  
+        <SubTitle>Pic Of The Day</SubTitle>
+        <H1>{picData.title}</H1>
+        <P>{dataContent}
+        </P>
+          <H3>
+          - {picData.date} - 
+          </H3>
+      </ImageDescription>
+          <ImageOTD>
+            <Image src={picData.url} alt='image'  layout='fill'
+                objectFit='contain' />
+          </ImageOTD>
+        </ContainerPic>
+   )
 }

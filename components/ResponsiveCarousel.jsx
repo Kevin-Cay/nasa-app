@@ -12,7 +12,7 @@ function ResponsiveCarousel({rover, roverGalery}) {
     return (
         <GaleryContainer>
 
-        <Carousel autoPlay={true} dynamicHeight={true}  infiniteLoop={true} thumbWidth={40} interval={5000} >
+        {/* <Carousel autoPlay={true} dynamicHeight={true}  infiniteLoop={true} thumbWidth={40} interval={5000} >
                 
         {
             arr_img.map((element, i) => (
@@ -22,7 +22,7 @@ function ResponsiveCarousel({rover, roverGalery}) {
                 </div>) )  
         }
             
-        </Carousel>
+        </Carousel> */}
         </GaleryContainer>
     );
 }

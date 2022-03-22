@@ -2,6 +2,7 @@ import { H1,  H3, P, SubTitle } from './global.styles';
 import {ContainerPic, ImageDescription, ImageOTD} from './PicOTD.styles'
 import Image from 'next/image';
 
+
 const defaultData ={
   title:"error",
   date: '01-01-1991' ,
@@ -33,12 +34,16 @@ function PicOTD({picData = defaultData}) {
       </ImageDescription>
           <ImageOTD>
             <Image src={picData.url} alt='image'  layout='fill'
-                objectFit='contain' />
+                objectFit='contain' priority />
           </ImageOTD>
         </ContainerPic>
    )
 }
 
+
+
 export default PicOTD;
+
+
 
 
