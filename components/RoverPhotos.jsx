@@ -65,7 +65,7 @@ function RoverPhotos({dataCuriosity, dataPerseverance}) {
 }
 
 export default RoverPhotos;
-const curiosityRover = [{
+export const curiosityRover = [{
   id: 1,
   name: "curiosity",
   title: "Curiosity Rover",
@@ -76,7 +76,7 @@ const curiosityRover = [{
   },
   footer: "Curiosity is about 3 metres long and weighs about 900 kg. ",
 }]
-const perseveranceRover = [{
+export const perseveranceRover = [{
   id: 2,
   name: "perseverance",
   title: "Perseverance Rover",
