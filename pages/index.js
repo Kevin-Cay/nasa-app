@@ -50,27 +50,25 @@ export default function Home({data ,
   )
 }
 
-// export async function getStaticProps(){
+export async function getStaticProps(){
   
-//   try{
-//     const apiKey = process.env.REACT_APP_NASA_APIKEY
-//     const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-//     const data = await res.json()
+  try{
+    const apiKey = process.env.REACT_APP_NASA_APIKEY
+    const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+    const data = await res.json()
 //     const resCuriosity = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?&page=1&api_key=${apiKey}`)
 //     const dataCuriosity = await resCuriosity.json() 
 //     const resPerseverance = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?&page=1&api_key=${apiKey}`)
 //     const dataPerseverance = await resPerseverance.json()
-//     return{
-//       props: {
-//         data,
-//         dataCuriosity : dataCuriosity,
-//         dataPerseverance: dataPerseverance,
-//       },
-//       revalidate: 10,
-//     }
-//   } catch (error) {
-//     console.log(error)
-//   }
-
-
-// }
+    return{
+      props: {
+        data,
+        // dataCuriosity : dataCuriosity,
+        // dataPerseverance: dataPerseverance,
+      },
+      revalidate: 10,
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
