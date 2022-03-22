@@ -1,4 +1,4 @@
-import { perseveranceRover } from "../../../data/roverInfo"
+import { perseveranceRover } from "../../roverInfo"
 
 export default function handler(req, res) {
     res.status(200).json(perseveranceRover)

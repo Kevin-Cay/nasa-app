@@ -1,5 +1,5 @@
-import { H1,  H3, P, SubTitle } from './global.styles';
-import {ContainerPic, ImageDescription, ImageOTD} from './PicOTD.styles'
+import { H1,  H3, P, SubTitle } from '../components/global.styles';
+import {ContainerPic, ImageDescription, ImageOTD} from '../components/PicOTD.styles'
 import Image from 'next/image';
 
 
@@ -10,15 +10,15 @@ const defaultData ={
   explanation:'error'
 }
 
-function PicOTD({picData = defaultData}) {
-  let dataContent = 'error' 
-    let content = picData.explanation
-    let newContent = content.split(".")
-    if(newContent.length >=4){
-      dataContent = newContent.slice(0, 4).join(".").concat("...")
-    }else{
-      dataContent = newContent.join('.')
-    }
+function PicOTD({picData}) {
+    let dataContent = 'error' 
+      let content = picData.explanation
+      let newContent = content.split(".")
+      if(newContent.length >=4){
+        dataContent = newContent.slice(0, 4).join(".").concat("...")
+      }else{
+        dataContent = newContent.join('.')
+      }
 
 
   return (
@@ -39,8 +39,6 @@ function PicOTD({picData = defaultData}) {
         </ContainerPic>
    )
 }
-
-
 
 export default PicOTD;
 
